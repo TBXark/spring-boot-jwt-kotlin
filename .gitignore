@@ -1,0 +1,28 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Thumbnails
+._*
+
+*.class
+
+*.jar
+*.war
+*.ear
+
+.gradle/
+gradle/
+build/
+out/
+
+.externalToolBuilders/
+
+*.iml
+*.ipr
+*.iws
+.idea/
+src/main/resources/application.yml
