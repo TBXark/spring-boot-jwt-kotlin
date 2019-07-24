@@ -1,5 +1,6 @@
 package com.tbxark.jwt.security.model
 
+import com.fasterxml.jackson.annotation.JsonBackReference
 import javax.persistence.*
 
 @Entity
@@ -15,4 +16,5 @@ data class Authority(@Id
                      var name: AuthorityName,
 
                      @ManyToMany(mappedBy = "authorities", fetch = FetchType.LAZY)
+                     @JsonBackReference
                      var users: List<User>? = null)

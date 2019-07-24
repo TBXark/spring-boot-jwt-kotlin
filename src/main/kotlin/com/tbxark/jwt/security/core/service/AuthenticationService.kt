@@ -76,8 +76,11 @@ class AuthenticationService {
         if (userRepository.findByUsername(request.username) != null) {
             throw AuthenticationException(HttpStatus.BAD_REQUEST.value(), "Username exist", null)
         }
-        var authority = Authority(null, AuthorityName.ROLE_USER, null)
-        authority = authorityRepository.save(authority)
+        var authority = authorityRepository.findByName(AuthorityName.ROLE_USER)
+                ?: Authority(null, AuthorityName.ROLE_USER, null)
+        if (authority.id == null) {
+            authority = authorityRepository.save(authority)
+        }
         var user = User(null, request.username, BCryptPasswordEncoder().encode(request.password), null, null, true, Date(), listOf(authority))
         user = userRepository.save(user)
         return user

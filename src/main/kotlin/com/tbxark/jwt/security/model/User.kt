@@ -36,5 +36,7 @@ data class User(@Id
                 val lastPasswordResetDate: Date = Date(),
 
                 @ManyToMany(fetch = FetchType.EAGER)
-                @JoinTable(name = "USER_AUTHORITY", joinColumns = [JoinColumn(name = "USER_ID", referencedColumnName = "ID")], inverseJoinColumns = [JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID")])
+                @JoinTable(name = "USER_AUTHORITY",
+                        joinColumns = [JoinColumn(name = "USER_ID", referencedColumnName = "ID")],
+                        inverseJoinColumns = [JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID")])
                 val authorities: List<Authority>? = null)
