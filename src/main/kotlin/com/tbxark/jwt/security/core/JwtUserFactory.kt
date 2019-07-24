@@ -1,8 +1,8 @@
 package com.tbxark.jwt.security.core
 
-import com.tbxark.jwt.security.core.model.JwtUser
-import com.tbxark.jwt.security.model.Authority
-import com.tbxark.jwt.security.model.User
+import com.tbxark.jwt.security.core.dto.JwtUser
+import com.tbxark.jwt.security.domain.Authority
+import com.tbxark.jwt.security.domain.User
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import kotlin.streams.toList

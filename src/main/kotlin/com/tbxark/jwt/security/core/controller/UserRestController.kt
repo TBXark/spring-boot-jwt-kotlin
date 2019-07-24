@@ -1,9 +1,9 @@
 package com.tbxark.jwt.security.core.controller
 
 import com.tbxark.jwt.security.core.JwtTokenUtil
-import com.tbxark.jwt.security.core.model.AuthenticationException
-import com.tbxark.jwt.security.core.model.JwtUser
-import com.tbxark.jwt.security.model.ResponseWrapper
+import com.tbxark.jwt.security.core.dto.AuthenticationException
+import com.tbxark.jwt.security.core.dto.JwtUser
+import com.tbxark.jwt.security.core.dto.ResponseWrapper
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.security.core.userdetails.UserDetailsService

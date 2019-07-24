@@ -1,7 +1,7 @@
 package com.tbxark.jwt.security.core.controller
 
-import com.tbxark.jwt.security.core.model.AuthenticationException
-import com.tbxark.jwt.security.model.ResponseWrapper
+import com.tbxark.jwt.security.core.dto.AuthenticationException
+import com.tbxark.jwt.security.core.dto.ResponseWrapper
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler

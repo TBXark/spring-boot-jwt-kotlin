@@ -1,4 +1,4 @@
-package com.tbxark.jwt.security.model
+package com.tbxark.jwt.security.core.dto
 
 import com.google.gson.Gson
 

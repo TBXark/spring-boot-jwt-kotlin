@@ -1,6 +1,6 @@
 package com.tbxark.jwt.security.core
 
-import com.tbxark.jwt.security.model.ResponseWrapper
+import com.tbxark.jwt.security.core.dto.ResponseWrapper
 import org.springframework.http.MediaType
 import org.springframework.security.core.AuthenticationException
 import org.springframework.security.web.AuthenticationEntryPoint

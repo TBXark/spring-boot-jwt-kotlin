@@ -1,4 +1,4 @@
-package com.tbxark.jwt.security.model
+package com.tbxark.jwt.security.domain
 
 import com.fasterxml.jackson.annotation.JsonBackReference
 import javax.persistence.*

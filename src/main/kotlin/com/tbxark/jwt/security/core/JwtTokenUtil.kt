@@ -1,6 +1,6 @@
 package com.tbxark.jwt.security.core
 
-import com.tbxark.jwt.security.core.model.JwtUser
+import com.tbxark.jwt.security.core.dto.JwtUser
 import io.jsonwebtoken.Claims
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm

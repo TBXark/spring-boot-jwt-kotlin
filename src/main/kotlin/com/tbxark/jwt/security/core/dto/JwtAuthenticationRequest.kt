@@ -1,4 +1,4 @@
-package com.tbxark.jwt.security.core.model
+package com.tbxark.jwt.security.core.dto
 
 import java.io.Serializable
 

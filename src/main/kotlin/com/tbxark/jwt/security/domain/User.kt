@@ -1,4 +1,4 @@
-package com.tbxark.jwt.security.model
+package com.tbxark.jwt.security.domain
 
 import java.util.*
 import javax.persistence.*

@@ -1,15 +1,15 @@
 package com.tbxark.jwt.security.core.service
 
 import com.tbxark.jwt.security.core.JwtTokenUtil
-import com.tbxark.jwt.security.core.model.AuthenticationException
-import com.tbxark.jwt.security.core.model.JwtAuthenticationRequest
-import com.tbxark.jwt.security.core.model.JwtAuthenticationResponse
-import com.tbxark.jwt.security.core.model.JwtUser
+import com.tbxark.jwt.security.core.dto.AuthenticationException
+import com.tbxark.jwt.security.core.dto.JwtAuthenticationRequest
+import com.tbxark.jwt.security.core.dto.JwtAuthenticationResponse
+import com.tbxark.jwt.security.core.dto.JwtUser
 import com.tbxark.jwt.security.core.repository.AuthorityRepository
 import com.tbxark.jwt.security.core.repository.UserRepository
-import com.tbxark.jwt.security.model.Authority
-import com.tbxark.jwt.security.model.AuthorityName
-import com.tbxark.jwt.security.model.User
+import com.tbxark.jwt.security.domain.Authority
+import com.tbxark.jwt.security.domain.AuthorityName
+import com.tbxark.jwt.security.domain.User
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.http.HttpStatus
