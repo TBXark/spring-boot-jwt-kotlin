@@ -12,15 +12,11 @@ class AuthenticationExceptionController {
 
     @ExceptionHandler(AccessDeniedException::class)
     @ResponseBody
-    fun handle(e: AccessDeniedException): ResponseWrapper<Any> {
-        val code = 403
-        val message = e.message ?: "Access Denied"
-        return ResponseWrapper.failure(code, message)
-    }
+    fun handleAccessDeniedException(e: AccessDeniedException): ResponseWrapper<Any> = ResponseWrapper.failure(HttpStatus.UNAUTHORIZED.value(), e.message
+            ?: "access Denied")
 
     @ExceptionHandler(AuthenticationException::class)
     @ResponseBody
-    fun handleAuthenticationException(e: AuthenticationException): ResponseWrapper<Any> {
-        return ResponseWrapper.failure(HttpStatus.UNAUTHORIZED.value(), e.message ?: "")
-    }
+    fun handleAuthenticationException(e: AuthenticationException): ResponseWrapper<Any> = ResponseWrapper.failure(HttpStatus.UNAUTHORIZED.value(), e.message
+            ?: "unauthorized")
 }

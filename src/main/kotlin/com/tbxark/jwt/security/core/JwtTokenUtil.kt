@@ -125,7 +125,7 @@ class JwtTokenUtil : Serializable {
     }
 
     companion object {
-        val bearerPrefix = "Bearer "
+        const val bearerPrefix = "Bearer "
         private const val serialVersionUID = 1L
     }
 

@@ -4,9 +4,8 @@ import com.tbxark.jwt.security.core.JwtTokenUtil
 import com.tbxark.jwt.security.core.dto.AuthenticationException
 import com.tbxark.jwt.security.core.dto.JwtAuthenticationRequest
 import com.tbxark.jwt.security.core.dto.JwtAuthenticationResponse
-import com.tbxark.jwt.security.core.service.AuthenticationService
 import com.tbxark.jwt.security.core.dto.ResponseWrapper
-import com.tbxark.jwt.security.domain.User
+import com.tbxark.jwt.security.core.service.JwtUserDetailsService
 import com.tbxark.jwt.security.dto.UserDTO
 import com.tbxark.jwt.security.utils.DTOFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -19,7 +18,7 @@ import javax.servlet.http.HttpServletRequest
 class AuthenticationRestController {
 
     @Autowired
-    private lateinit var authenticationService: AuthenticationService
+    private lateinit var authenticationService: JwtUserDetailsService
 
     @Autowired
     private lateinit var jwtTokenUtil: JwtTokenUtil
