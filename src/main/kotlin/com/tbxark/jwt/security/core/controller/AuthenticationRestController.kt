@@ -7,6 +7,7 @@ import com.tbxark.jwt.security.core.dto.JwtAuthenticationResponse
 import com.tbxark.jwt.security.core.service.AuthenticationService
 import com.tbxark.jwt.security.core.dto.ResponseWrapper
 import com.tbxark.jwt.security.domain.User
+import com.tbxark.jwt.security.dto.UserDTO
 import com.tbxark.jwt.security.utils.DTOFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
@@ -26,7 +27,7 @@ class AuthenticationRestController {
 
     @PostMapping("/register")
     @Throws(AuthenticationException::class)
-    fun registerAuthenticationToken(@RequestBody authenticationRequest: JwtAuthenticationRequest): ResponseWrapper<User> {
+    fun registerAuthenticationToken(@RequestBody authenticationRequest: JwtAuthenticationRequest): ResponseWrapper<UserDTO> {
         val user = authenticationService.register(authenticationRequest)
         return ResponseWrapper.success(DTOFactory.create(user))
     }
