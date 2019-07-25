@@ -27,8 +27,8 @@ class AuthenticationRestController {
     @PostMapping("/register")
     @Throws(AuthenticationException::class)
     fun registerAuthenticationToken(@RequestBody authenticationRequest: JwtAuthenticationRequest): ResponseWrapper<UserDTO> {
-        val user = authenticationService.register(authenticationRequest)
-        return ResponseWrapper.success(DTOFactory.create(user))
+        val user: UserDTO = DTOFactory.create(authenticationService.register(authenticationRequest))
+        return ResponseWrapper.success(user)
     }
 
     @PostMapping("/login")
