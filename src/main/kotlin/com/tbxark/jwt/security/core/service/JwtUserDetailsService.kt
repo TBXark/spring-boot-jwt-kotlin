@@ -79,7 +79,7 @@ class JwtUserDetailsService : UserDetailsService {
             authority = authorityRepository.save(authority)
         }
         var user = User(null, request.username, BCryptPasswordEncoder().encode(request.password), request.username, null, true, Date(), listOf(authority))
-        user = userRepository.save(user)
+        user = userRepository.save(user=user)
         return user
     }
 
