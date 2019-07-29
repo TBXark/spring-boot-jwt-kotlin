@@ -1,5 +1,7 @@
 package com.tbxark.jwt.security.domain
 
-enum class AuthorityName {
+import java.io.Serializable
+
+enum class AuthorityName: Serializable {
     ROLE_USER, ROLE_ADMIN
 }

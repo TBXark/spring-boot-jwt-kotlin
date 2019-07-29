@@ -1,6 +1,7 @@
 package com.tbxark.jwt.security.domain
 
 import com.fasterxml.jackson.annotation.JsonBackReference
+import java.io.Serializable
 import javax.persistence.*
 
 @Entity
@@ -17,4 +18,4 @@ data class Authority(@Id
 
                      @ManyToMany(mappedBy = "authorities", fetch = FetchType.LAZY)
                      @JsonBackReference
-                     var users: List<User>? = null)
+                     var users: List<User>? = null): Serializable

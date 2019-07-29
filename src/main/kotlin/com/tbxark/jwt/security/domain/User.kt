@@ -1,5 +1,6 @@
 package com.tbxark.jwt.security.domain
 
+import java.io.Serializable
 import java.util.*
 import javax.persistence.*
 import javax.validation.constraints.Size
@@ -39,4 +40,4 @@ data class User(@Id
                 @JoinTable(name = "USER_AUTHORITY",
                         joinColumns = [JoinColumn(name = "USER_ID", referencedColumnName = "ID")],
                         inverseJoinColumns = [JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID")])
-                val authorities: List<Authority>? = null)
+                val authorities: List<Authority>? = null): Serializable
